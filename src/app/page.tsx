@@ -5,7 +5,6 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 import styles from "./page.module.css"
-import getCookie from "./function/getToken";
 import {requestCheckLogin} from "./function/requestServer";
 
 export default function Home() {
