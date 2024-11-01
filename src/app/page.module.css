@@ -1,0 +1,297 @@
+.loading {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 요소 배치 */
+    align-items: center; /* 가로 방향 중앙 정렬 */
+    justify-content: center; /* 세로 방향 중앙 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이를 차지 */
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    background-color: #00020B;
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: flex-start; /* 상단부터 배치 */
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.mainHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+    background-color: #000000;
+    position: fixed; /* 고정된 위치 */
+    top: 0; /* 화면의 최상단에 고정 */
+    left: 0;
+    width: 100%; /* 가로 크기를 100%로 설정 */
+    height: 8vh; /* 헤더의 높이 설정 (뷰포트 높이의 8%) */
+    z-index: 1000; /* 다른 요소들 위에 있게 설정 */
+    
+}
+
+.newHeader {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    position: fixed; /* 고정된 위치 */
+    top: 0; /* 화면의 최상단에 고정 */
+    left: 0;
+    width: 100%; /* 가로 크기를 100%로 설정 */
+    height: 10%; /* 헤더의 높이 설정 (뷰포트 높이의 8%) */
+    z-index: 1000; /* 다른 요소들 위에 있게 설정 */
+}
+
+.mainCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8vh; /* 헤더 높이만큼의 여백 */
+    height: auto; /* 헤더를 제외한 나머지 공간 */
+}
+
+.newMain {
+    display: flex;
+    background-color: #00020B; /* Tailwind CSS의 bg-gray-100 */
+    flex-direction: column; /* 세로로 배치 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    width: 100%; /* 전체 너비 */
+    padding: 1rem; /* Tailwind CSS의 p-4 */ /* 패딩을 포함하여 크기 계산 */
+    overflow: hidden;
+}
+
+.dashboardCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25vh; /* 헤더 높이만큼의 여백 */
+    height: auto; /* 헤더를 제외한 나머지 공간 */
+    width: 100%;
+}
+
+.mainImage {
+    width: 30%;
+    height: auto;
+}
+
+.mainText {
+    font-size: 5vw;
+    color: #F2EFE9;
+}
+
+.mainHeaderImage {
+    margin-left: 1%;
+    width: 4%;
+    height: auto;
+}
+
+.mainTail {
+    margin-top: 10%;
+    width: 100%; /* 부모 요소에 맞추기 */
+    height: auto; /* 필요한 경우 조정 */
+    background-color: #000000;
+}
+
+.mainTailSection {
+    display: flex;
+    flex-direction: row; /* 기본값이 row이지만 명시적으로 설정 */
+    justify-content: space-between; /* 중앙 정렬 (필요에 따라 조정) */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.mainTailComponentSection {
+    margin-top: 1%;
+    margin-bottom: 10%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    justify-content: flex-end;
+    width: 80%; /* 각 컴포넌트의 너비 설정 */
+    height: auto; /* 원하는 높이 설정 */
+    box-sizing: border-box; /* 패딩과 마진을 포함한 크기 계산 */
+}
+
+.mainTailComponentSection2 {
+    margin-top: 1%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    width: 80%; /* 각 컴포넌트의 너비 설정 */
+    height: auto; /* 원하는 높이 설정 */
+    box-sizing: border-box; /* 패딩과 마진을 포함한 크기 계산 */
+}
+
+.mainTailCopyrightSection {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 1%;
+}
+
+.mainTailImage {
+    width: 30%;
+    height: auto;
+}
+
+.mainTailLogo {
+    font-size: 2vw;
+    color: #F2EFE9;
+}
+
+.serviceInfo {
+    margin-top: 1%;
+    font-size: 18px;
+    color: #F2EFE9;
+}
+
+.copyRight {
+    font-size: 15px;
+    color: #F2EFE9;
+}
+
+.googleLoginButton {
+    background-color: #4285F4; /* 구글 블루 색상 */
+    color: white; /* 텍스트 색상 */
+    border: none; /* 기본 테두리 제거 */
+    border-radius: 4px; /* 모서리 둥글게 */
+    padding: 10px 20px; /* 상하, 좌우 패딩 */
+    cursor: pointer; /* 마우스 커서 포인터로 변경 */
+    transition: background-color 0.3s; /* 배경색 변화에 애니메이션 추가 */
+    margin-right: 1%;
+}
+
+.googleLoginButton:hover {
+    background-color: #254a85; /* 호버 시 색상 변경 */
+}
+
+.headerComponentSection {
+    display: flex;
+    width: 27%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.headerComponent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.headerComponent2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    
+}
+
+.dashboardComponentSection {
+    display: flex;
+    margin-top: 3%;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboardComponent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.dashboardButton,
+.logoutButton {
+    background-color: gray; /* 구글 블루 색상 */
+    color: #F2EFE9; /* 텍스트 색상 */
+    height: 40px;
+    padding: 5px 0; /* 세로 패딩만 적용 */
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    box-sizing: border-box; /* padding이 width에 포함되도록 */
+    flex: 1; /* flex-grow 적용하여 남는 공간을 모두 차지하도록 */
+    margin: 0 5%; /* 버튼 사이의 여백 추가 */
+}
+
+.newDiagram {
+    background-color: gray; /* 구글 블루 색상 */
+    color: #F2EFE9; /* 텍스트 색상 */
+    height: 40px;
+    padding: 5px 0; /* 세로 패딩만 적용 */
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    box-sizing: border-box; /* padding이 width에 포함되도록 */
+    flex: 1; /* flex-grow 적용하여 남는 공간을 모두 차지하도록 */
+    margin: 0 5%; /* 버튼 사이의 여백 추가 */
+}
+
+.userProfile {
+    border-radius: 4px;          /* 둥글게 만들기 */
+    width: 50px;                 /* 크기 조정 (너비) */
+    height: 50px;                /* 크기 조정 (높이) */
+    object-fit: cover;
+    
+}
+
+.selectFunctionSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    position: fixed; /* 고정된 위치 */
+    left: 0;
+    width: 27vh; /* 가로 크기를 100%로 설정 */
+    height: 100%;
+    z-index: 900; /* 다른 요소들 위에 있게 설정 */
+}
+
+.canvasSection {
+    display: flex;
+    width: calc(100% - 27vh); /* .selectFunctionSection의 가로 크기를 빼줌 */
+    height: auto;
+    background-color: white;
+    margin-top: 8vh; /* .mainHeader의 높이만큼 위쪽에 공간을 줌 */
+    margin-left: 27vh;
+}
+
+.dashboardSetDateSection {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    margin-left: 2%;
+    position: fixed; /* 고정된 위치 */
+    top: 8vh; 
+    left: 0;
+    width: 100%; /* 가로 크기를 100%로 설정 */
+    height: 10vh; /* 헤더의 높이 설정 (뷰포트 높이의 8%) */
+    z-index: 1000; /* 다른 요소들 위에 있게 설정 */
+}
+
+
+
+.logoutButton:hover {
+    background-color: rgb(59, 59, 59); /* 호버 시 색상 변경 */
+}
+
+.dashboardButton:hover {
+    background-color: rgb(59, 59, 59); /* 호버 시 색상 변경 */
+}
