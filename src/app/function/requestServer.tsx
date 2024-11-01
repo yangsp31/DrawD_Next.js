@@ -10,7 +10,7 @@ interface Diagram {
 
 export async function requestCheckLogin (profile : string) {
     try {
-        const response = await axios.get('/api/check/login', {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/check/login`, {
             headers : {
               "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`
             },
@@ -24,7 +24,7 @@ export async function requestCheckLogin (profile : string) {
     catch (error) {
         if(axios.isAxiosError(error) && error.response?.status === 401) {
             try {
-                const response = await axios.get('/api/refresh/jwt', {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/refresh/jwt`, {
                     withCredentials : true,
                     params : {
                       profile : profile
@@ -59,7 +59,7 @@ export async function requestCheckLogin (profile : string) {
 
 export async function requestGetPastDiagram(year : number, month : number) {
     try {
-        const response = await axios.get('/api/past/diagram', {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/past/diagram`, {
             headers : {
                 "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                 "Content-Type" : "application/json"
@@ -72,7 +72,7 @@ export async function requestGetPastDiagram(year : number, month : number) {
     catch (error) {
         if(axios.isAxiosError(error) && error.response?.status === 401) {
             try {
-                const response = await axios.get('/api/refresh/jwt', {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/refresh/jwt`, {
                     withCredentials : true,
                     params : {
                         profile : "exists"
@@ -88,7 +88,7 @@ export async function requestGetPastDiagram(year : number, month : number) {
                     throw new Error("no Cookie");
                 }
                 
-                const responseRe = await axios.get('/api/past/diagram', {
+                const responseRe = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/past/diagram`, {
                     headers : {
                         "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                         "Content-Type" : "application/json"
@@ -114,7 +114,7 @@ export async function requestGetPastDiagram(year : number, month : number) {
 
 export async function requestDeleteDiagram(diagramId : string | string[]) {
     try {
-        const response = await axios.delete(`/api/delete/diagram/${diagramId}`, {
+        const response = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/delete/diagram/${diagramId}`, {
             headers : {
                 "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                 "Content-Type" : "application/json"
@@ -127,7 +127,7 @@ export async function requestDeleteDiagram(diagramId : string | string[]) {
     catch (error) {
         if(axios.isAxiosError(error) && error.response?.status === 401) {
             try {
-                const response = await axios.get('/api/refresh/jwt', {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/refresh/jwt`, {
                     withCredentials : true,
                     params : {
                         profile : "exists"
@@ -143,7 +143,7 @@ export async function requestDeleteDiagram(diagramId : string | string[]) {
                     throw new Error("no Cookie");
                 }
                 
-                const responseRe = await axios.delete(`/api/delete/diagram/${diagramId}`, {
+                const responseRe = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/delete/diagram/${diagramId}`, {
                     headers : {
                         "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                         "Content-Type" : "application/json"
@@ -169,7 +169,7 @@ export async function requestDeleteDiagram(diagramId : string | string[]) {
 
 export async function requestSelectedDiagram(uuid : string | string[]) {
     try {
-        const response = await axios.get(`/api/select/diagram/${uuid}`, {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/select/diagram/${uuid}`, {
             headers : {
                 "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                 "Content-Type" : "application/json"
@@ -184,7 +184,7 @@ export async function requestSelectedDiagram(uuid : string | string[]) {
     catch (error) {
         if(axios.isAxiosError(error) && error.response?.status === 401) {
             try {
-                const response = await axios.get('/api/refresh/jwt', {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/refresh/jwt`, {
                     withCredentials : true,
                     params : {
                         profile : "exists"
@@ -200,7 +200,7 @@ export async function requestSelectedDiagram(uuid : string | string[]) {
                     throw new Error("No cookie");
                 }
                 
-                const responseRe = await axios.get(`/api/select/diagram/${uuid}`, {
+                const responseRe = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/select/diagram/${uuid}`, {
                     headers : {
                         "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                         "Content-Type" : "application/json"
@@ -230,7 +230,7 @@ export async function requestSelectedDiagram(uuid : string | string[]) {
 
 export async function requestSaveDiagram(Diagram : Diagram) {
     try {
-        const response = await axios.post('/api/save/Diagram', Diagram, {
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/save/Diagram`, Diagram, {
           headers : {
             "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
             "Content-Type" : "application/json"
@@ -245,7 +245,7 @@ export async function requestSaveDiagram(Diagram : Diagram) {
     catch (error) {
         if(axios.isAxiosError(error) && error.response?.status === 401) {
             try {
-                const response = await axios.get('/api/refresh/jwt', {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/refresh/jwt`, {
                     withCredentials : true,
                     params : {
                         profile : "exists"
@@ -261,7 +261,7 @@ export async function requestSaveDiagram(Diagram : Diagram) {
                     throw new Error("No Cookie");
                 }
                 
-                const responseRe = await axios.post('/api/save/Diagram', Diagram, {
+                const responseRe = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/save/Diagram`, Diagram, {
                     headers : {
                         "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                         "Content-Type" : "application/json"
@@ -290,7 +290,7 @@ export async function requestSaveDiagram(Diagram : Diagram) {
 
 export async function requestUpdateDiagram(Diagram : Diagram) {
     try {
-        const response = await axios.put('/api/update/Diagram', Diagram, {
+        const response = await axios.put(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/update/Diagram`, Diagram, {
           headers : {
             "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
             "Content-Type" : "application/json"
@@ -305,7 +305,7 @@ export async function requestUpdateDiagram(Diagram : Diagram) {
     catch (error) {
         if(axios.isAxiosError(error) && error.response?.status === 401) {
             try {
-                const response = await axios.get('/api/refresh/jwt', {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/refresh/jwt`, {
                     withCredentials : true,
                     params : {
                         profile : "exists"
@@ -321,7 +321,7 @@ export async function requestUpdateDiagram(Diagram : Diagram) {
                     throw new Error("No Cookie");
                 }
                 
-                const responseRe = await axios.post('/api/update/Diagram', Diagram, {
+                const responseRe = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/update/Diagram`, Diagram, {
                     headers : {
                         "Authorization" : `Bearer ${localStorage.getItem("DrawDAccessToken")}`,
                         "Content-Type" : "application/json"

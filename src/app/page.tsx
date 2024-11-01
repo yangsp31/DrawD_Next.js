@@ -15,12 +15,12 @@ export default function Home() {
   const [userProfile, setUserProfile] = useState<string | null>(null);
 
   const handleLogin = () => {
-    window.location.href = '/api/oauth2/authorization/google';
+    window.location.href = `${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/oauth2/authorization/google`;
   };
 
   const handleLogOut = async() => {
     try {
-      const response = await axios.get('/api/logout', {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/logout`, {
         withCredentials : true
       })
 
