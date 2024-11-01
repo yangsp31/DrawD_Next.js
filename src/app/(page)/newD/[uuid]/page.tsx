@@ -685,7 +685,7 @@ export default function newDiagram() {
       }
 
       try {
-        const response = await axios.get(`https://${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/search/material`, {
+        const response = await axios.get('/api/search/material', {
           headers : {
             "Content-Type" : "application/json"
           },
