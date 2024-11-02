@@ -61,7 +61,6 @@ export default function Home() {
   }
 
   useEffect(() => {
-    console.log("hihihihihihihihihihi");
     checkLogin();
     setUserProfile(localStorage.getItem("userProfile"));
   }, [])

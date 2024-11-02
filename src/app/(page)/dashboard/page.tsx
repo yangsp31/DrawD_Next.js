@@ -6,8 +6,6 @@ import styles from "../../page.module.css"
 import { useRouter } from "next/navigation";
 import { Pencil, Trash2 } from "lucide-react"
 import { v4 as uuidv4 } from "uuid";
-import axios from "axios";
-import getCookie from "../../function/getToken";
 import { requestDeleteDiagram, requestGetPastDiagram } from "../../function/requestServer";
 
 interface PastDiagram {
