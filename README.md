@@ -10,3 +10,12 @@
 
 # Architecture
 ![Architecture](https://github.com/user-attachments/assets/2593dac2-4c52-40aa-a57c-e878742eb315)
+<br><br>
+
+# Screen
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5d9749d7-5f80-4697-bf98-f02be1c43c82" width="500"/>
+  <img src="https://github.com/user-attachments/assets/df8893c4-fc3a-40d1-8170-6a03a3843dc1" width="500"/>
+  <img src="https://github.com/user-attachments/assets/33f2eaf7-ab22-41cc-b2eb-f027912093cc" width="500"/>
+</p>
